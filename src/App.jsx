@@ -1,20 +1,44 @@
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import CardComponent from './CardComponent/CardComponent';
+import CardComponent from './Components/CardComponent';
 import img1 from '../src/assets/ITE.webp'
 import img2 from '../src/assets/GDA.webp';
 import img3 from '../src/assets/DMA.webp';
+import Header from './Components/Header';
+ const data=[
+  {
+    title:"IT Support Engineer", text:"it support engineer" ,img:img1
+  },
+  {
+    title:"Graphic Desgining with AI", text:"it support engineer" ,img:img2
+  },
+  {
+    title:"Digital Marketing with AI", text:"it support engineer" ,img:img3
+  }
+ ]
 function App() {
-  img1 ,img2,img3
- 
+
 
   return (  
     <>
-    <CardComponent img ="img1" title="IT Support Engineer" text="it support engineer" />  
-     <CardComponent  img ="img2" title="Digital Markeiting  With AI" text="Digital Markeiting  With AI" /> 
-      <CardComponent img ="img3" title="Graphic Desgining With AI" text="Graphic Desgining  With AI" /> 
-        
+< Header />
+    
+    
+    <div style = {{display:"flex",flexWrap:"wrap",gap:"5%" ,padding:"2px",margin:"2px"}}>
+      {
+        data.map((data,index)=>(
+          <CardComponent 
+          key={index}
+          title={data.title}
+          text={data.text}
+          img={data.img}/>
+        ))
+      } 
+   
+    </div>
+       
     </>
+
   )
 }
 
