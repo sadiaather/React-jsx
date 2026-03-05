@@ -1,7 +1,7 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-// import Button from 'react-bootstrap/button';
+import Button from 'react-bootstrap/button';
 
 function Header() {
   return (
@@ -16,7 +16,7 @@ function Header() {
             <Nav.Link href="#link">Courses</Nav.Link>
             <Nav.Link href="#link">Check result</Nav.Link>
           </Nav>
-          {/* <Button variant="primary">Enroll Now</Button> */}
+          <Button variant="primary">Enroll Now</Button>
          
         </Navbar.Collapse>
       </Container>
